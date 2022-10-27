@@ -1,0 +1,653 @@
+/*Estilo del HTML */
+
+/* Importo una fuente de googlefonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+/* Importo al proyecto */
+@font-face { 
+    font-family: "JetBrains"; 
+    src: url("JetBrainsMono.ttf"); 
+} 
+
+/* reseteo de la web con el selector universal*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+
+
+/* para pantallas grandes*/
+@media screen and (min-width: 1024px) {
+    textarea{
+        height: 250px;
+        width: 500px;
+    }
+
+    h2{
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 2rem;   
+        margin-bottom: 10px;
+    }
+
+    h3{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.8rem; 
+        margin-bottom: 10px;  
+    }
+
+    li{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.5rem; 
+        margin-bottom: 10px;  
+    }
+
+    iframe{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        border: solid 1px rgb(75, 75, 75);
+    }
+
+    p{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    label, .div-text{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    td,th{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ul {
+        list-style: none;
+        font-size:0 /* truco por el uso de inline-block*/
+    }
+
+
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  auto 70px; 
+        min-height: 100vh;   
+        min-width: 99vw; 
+        background-color: #000000;  
+    }
+
+    header {  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        background-image: url(../image/estrellas.png);    
+        background-repeat:repeat;
+        opacity: .85;
+        height: 70px;    
+        width: 100%;
+        position: fixed; 
+    }
+
+        .header__img__1 {
+            flex-basis: 2%;
+            padding-left: 2%;
+
+        }
+
+        .header__div__2{
+            flex-basis: 23%;
+        }
+
+        .header__nav__3{
+            flex-basis: 50%;
+
+        }
+
+        .header__nav__ul__li {       
+            font-size: 1rem;    
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-left: 10px;    
+        }
+
+        .header__nav__ul__li__a {
+            color:#FBCA85;    
+        }
+
+        .header__nav__ul{
+            display: flex;
+            justify-content: space-between;  
+        }
+
+        .header__div__4{
+            flex-basis: 25%;
+        }
+
+    main {  
+        padding-top: 90px;    
+        padding-bottom: 10px;
+        display : flex;
+        background-image: url(../image/estrellas.png);    
+        background-repeat:repeat;
+
+    }
+
+        .main__div__1{
+            flex-basis: 10%;
+        }
+
+        .main__div__2{
+            flex-basis: 70%;
+        }
+            .main__div__2__div{
+                align-items: left;       
+            }
+
+            .main__div__2__form__input__nombre{
+                padding-right: 40px;
+                width: 300px;
+            }
+            
+            .main__div__2__form__input__mail{
+                margin-left: 10px;
+                width: 300px;
+            }
+
+            .main__div__2__div__boton{
+                padding-left: 25px;
+                padding-right: 25px;
+                padding-top: 5px;
+                padding-bottom: 5px; 
+                transform: translate(400px, 0px);       
+            }
+            
+            .main__div2__form__div__sexo{
+                margin-top: 10px;
+                display: flex;    
+                gap: 10px;  
+            }
+
+            .main__div__2__p-tipDoc{
+                margin-bottom: 5px;
+            }
+
+            .main__div__2__input-dni{
+                margin-left: 9px;    
+            }
+
+            .main__div__2__section__article-img-sistemaSolar{
+                margin-bottom: 20px;
+            }
+
+        .main__div__3{
+            flex-basis: 20%;        
+        }
+
+    footer {      
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        opacity: .90;
+        display: flex;    
+    }
+
+        .footer__div__1{
+            flex-basis: 20%; 
+            padding-left: 5px; 
+            display : flex;     
+            gap: 10px; 
+            margin-left: 5px;   
+        }
+
+        .footer__div__2{
+            flex-basis: 5%;        
+        }
+        .footer__div__3{
+            flex-basis: 50%;        
+        }
+        .footer__div__4{
+            flex-basis: 25%;        
+        }
+        
+        .footer__div__3__p{
+            color:#FBCA85; 
+            font-size: 0.75rem;
+            text-align: center;
+        }
+}  
+
+/* Para tablet */
+@media (min-width: 768px) and (max-width:1023px) {
+    
+    textarea{
+        height: 250px;
+        width: 500px;
+    }
+
+    h2{
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 2rem;   
+        margin-bottom: 10px;
+    }
+
+    h3{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.8rem; 
+        margin-bottom: 10px;  
+    }
+
+    li{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.5rem; 
+        margin-bottom: 10px;  
+    }
+
+    iframe{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        border: solid 1px rgb(75, 75, 75);
+    }
+
+    p{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    label, .div-text{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    td,th{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ul {
+        list-style: none;
+        font-size:0 /* truco por el uso de inline-block*/
+    }
+
+
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  auto 70px; 
+        min-height: 100vh;   
+        min-width: 99vw; 
+        background-color: #1A1D1C;  
+    }
+
+    header {  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        background-image: url(../image/estrellas.png);    
+        background-repeat:repeat;
+        opacity: .85;
+        height: 70px;    
+        width: 100%;
+        position: fixed; 
+    }
+
+        .header__img__1 {
+            flex-basis: 2%;
+            padding-left: 2%;
+
+        }
+
+        .header__div__2{
+            flex-basis: 23%;
+        }
+
+        .header__nav__3{
+            flex-basis: 50%;
+
+        }
+
+        .header__nav__ul__li {       
+            font-size: 1rem;    
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-left: 10px;    
+        }
+
+        .header__nav__ul__li__a {
+            color:#FBCA85;    
+        }
+
+        .header__nav__ul{
+            display: flex;
+            justify-content: space-between;  
+        }
+
+        .header__div__4{
+            flex-basis: 25%;
+        }
+
+    main {  
+        padding-top: 90px;    
+        padding-bottom: 10px;
+        display : flex;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2))
+        url(../image/estrellas.png);    
+        background-repeat:repeat;
+
+    }
+
+        .main__div__1{
+            flex-basis: 10%;
+        }
+
+        .main__div__2{
+            flex-basis: 70%;
+        }
+            .main__div__2__div{
+                align-items: left;       
+            }
+
+            .main__div__2__form__input__nombre{
+                padding-right: 40px;
+                width: 300px;
+            }
+            
+            .main__div__2__form__input__mail{
+                margin-left: 10px;
+                width: 300px;
+            }
+
+            .main__div__2__div__boton{
+                padding-left: 25px;
+                padding-right: 25px;
+                padding-top: 5px;
+                padding-bottom: 5px;        
+            }
+            
+            .main__div2__form__div__sexo{
+                margin-top: 10px;
+                display: flex;    
+                gap: 10px;  
+            }
+
+            .main__div__2__p-tipDoc{
+                margin-bottom: 5px;
+            }
+
+            .main__div__2__input-dni{
+                margin-left: 9px;    
+            }
+
+            .main__div__2__section__article-img-sistemaSolar{
+                margin-bottom: 20px;
+            }
+
+        .main__div__3{
+            flex-basis: 20%;        
+        }
+
+    footer {      
+        justify-content: space-between;
+        align-items: center;
+        /*background-color: rgb(0, 0, 0);*/
+        opacity: .90;
+        display: flex;    
+    }
+
+        .footer__div__1{
+            flex-basis: 20%; 
+            padding-left: 5px; 
+            display : flex;     
+            gap: 10px; 
+            margin-left: 5px;   
+        }
+
+        .footer__div__2{
+            flex-basis: 5%;        
+        }
+        .footer__div__3{
+            flex-basis: 50%;        
+        }
+        .footer__div__4{
+            flex-basis: 25%;        
+        }
+        
+        .footer__div__3__p{
+            color:#FBCA85; 
+            font-size: 0.75rem;
+            text-align: center;
+        }
+}
+
+/* Para celular */
+@media (min-width:0px) and (max-width:767px) {
+    textarea{
+        height: 250px;
+        width: 500px;
+    }
+
+    h2{
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 2rem;   
+        margin-bottom: 10px;
+    }
+
+    h3{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.8rem; 
+        margin-bottom: 10px;  
+    }
+
+    li{ 
+        font-family: 'roboto';
+        color: #84c3eb;
+        font-size: 1.5rem; 
+        margin-bottom: 10px;  
+    }
+
+    iframe{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        border: solid 1px rgb(75, 75, 75);
+    }
+
+    p{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    label, .div-text{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+    }
+
+    td,th{
+        font-family: 'jetbrains';
+        color: #f7d4a5;
+        font-size: 1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ul {
+        list-style: none;
+        font-size:0 /* truco por el uso de inline-block*/
+    }
+
+
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  auto 70px; 
+        min-height: 100vh;   
+        min-width: 99vw; 
+        background-color: #1A1D1C;  
+    }
+
+    header {  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        background-image: url(../image/estrellas.png);    
+        background-repeat:repeat;
+        opacity: .85;
+        height: 70px;    
+        width: 100%;
+        position: fixed; 
+    }
+
+        .header__img__1 {
+            flex-basis: 2%;
+            padding-left: 2%;
+
+        }
+
+        .header__div__2{
+            flex-basis: 23%;
+        }
+
+        .header__nav__3{
+            flex-basis: 50%;
+
+        }
+
+        .header__nav__ul__li {       
+            font-size: 1rem;    
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-left: 10px;    
+        }
+
+        .header__nav__ul__li__a {
+            color:#FBCA85;    
+        }
+
+        .header__nav__ul{
+            display: flex;
+            justify-content: space-between;  
+        }
+
+        .header__div__4{
+            flex-basis: 25%;
+        }
+
+    main {  
+        padding-top: 90px;    
+        padding-bottom: 10px;
+        display : flex;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2))
+        url(../image/estrellas.png);    
+        background-repeat:repeat;
+
+    }
+
+        .main__div__1{
+            flex-basis: 10%;
+        }
+
+        .main__div__2{
+            flex-basis: 70%;
+        }
+            .main__div__2__div{
+                align-items: left;       
+            }
+
+            .main__div__2__form__input__nombre{
+                padding-right: 40px;
+                width: 300px;
+            }
+            
+            .main__div__2__form__input__mail{
+                margin-left: 10px;
+                width: 300px;
+            }
+
+            .main__div__2__div__boton{
+                padding-left: 25px;
+                padding-right: 25px;
+                padding-top: 5px;
+                padding-bottom: 5px;        
+            }
+            
+            .main__div2__form__div__sexo{
+                margin-top: 10px;
+                display: flex;    
+                gap: 10px;  
+            }
+
+            .main__div__2__p-tipDoc{
+                margin-bottom: 5px;
+            }
+
+            .main__div__2__input-dni{
+                margin-left: 9px;    
+            }
+
+            .main__div__2__section__article-img-sistemaSolar{
+                margin-bottom: 20px;
+            }
+
+        .main__div__3{
+            flex-basis: 20%;        
+        }
+
+    footer {      
+        justify-content: space-between;
+        align-items: center;
+        /*background-color: rgb(0, 0, 0);*/
+        opacity: .90;
+        display: flex;    
+    }
+
+        .footer__div__1{
+            flex-basis: 20%; 
+            padding-left: 5px; 
+            display : flex;     
+            gap: 10px; 
+            margin-left: 5px;   
+        }
+
+        .footer__div__2{
+            flex-basis: 5%;        
+        }
+        .footer__div__3{
+            flex-basis: 50%;        
+        }
+        .footer__div__4{
+            flex-basis: 25%;        
+        }
+        
+        .footer__div__3__p{
+            color:#FBCA85; 
+            font-size: 0.75rem;
+            text-align: center;
+        }
+}

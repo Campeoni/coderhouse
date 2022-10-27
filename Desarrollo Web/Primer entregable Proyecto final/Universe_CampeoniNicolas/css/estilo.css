@@ -1,0 +1,170 @@
+/*Estilo del HTML */
+
+/* Importo una fuente de googlefonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+/* Importo al proyecto */
+@font-face { 
+    font-family: "JetBrains"; 
+    src: url("JetBrainsMono.ttf"); 
+} 
+
+/* reseteo de la web con el selector universal*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {    
+    background-color: #010D12;   
+    background-image: url(../image/dots.png);
+    background-repeat:repeat;
+    min-height: 100%;
+    position: relative;
+}
+
+h2{
+    font-family: 'roboto';
+    color: #84c3eb;
+    font-size: 30px;   
+    margin-bottom: 10px;
+}
+
+h3{ 
+    font-family: 'roboto';
+    color: #84c3eb;
+    font-size: 25px; 
+    margin-bottom: 10px;  
+}
+
+img{
+    margin-bottom: 15px;
+    margin-top: 20px;    
+}
+
+iframe{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border: solid 1px rgb(75, 75, 75);
+}
+
+p{
+    font-family: 'jetbrains';
+    color: #f7d4a5;
+    font-size: 15px;
+}
+label, .div-text{
+    font-family: 'jetbrains';
+    color: #f7d4a5;
+    font-size: 15px;
+}
+
+td,th{
+    font-family: 'jetbrains';
+    color: #f7d4a5;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul {
+    list-style: none;
+    font-size:0 /* truco por el uso de inline-block*/
+}
+
+main{
+    padding-top: 85px;
+    padding-bottom: 100px;
+    position: relative;
+    left: 10%;
+    width: 70%;
+}
+
+footer{    
+    margin-top: 30px;
+    background-color: black;
+    opacity: .90;     
+    width: 100%;  
+    position: absolute;
+    /*top: ;*/
+    bottom: 0;
+    /*right: ;
+    left: ;*/
+}
+
+header {
+    position: fixed;
+    width:100%;
+    top: 0;
+    left: 0;    
+    background-color: black;
+    opacity: .90;
+    z-index: 1;
+}
+
+.header__img {
+    display: inline-block;
+}
+
+.header__nav{
+    display: inline-block;
+    position: relative;
+    bottom:25px;
+    left: 25%;
+}
+
+.header__nav__ul {
+    display: inline-block;
+}
+
+.header__nav__ul__li {
+    display: inline-block;
+    width: auto;
+    position:relative;
+    font-size: 16px;    
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 10px;    
+}
+
+.header__nav__ul__li__a {
+    color:#FBCA85;    
+}
+
+.footer__div__a{
+    display: inline-block;
+    font-size: 10px;    
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.footer__div__p{
+    display: inline-block;
+    font-size: 12px; 
+    left: 35%;
+    position: absolute;
+    padding-top: 35px;
+}
+
+.noticias-centro{
+    margin-left: 1%;
+}
+
+.main__section__article__ol__li{
+    font-family: 'roboto';
+    color: #84c3eb;
+    font-size: 25px; 
+    margin-bottom: 10px;  
+}
+
+.main__section__form__div__p {
+    display: inline-block;
+    margin-top: 10px;
+}

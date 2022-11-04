@@ -1,0 +1,139 @@
+/* reseteo de la web con el selector universal*/
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #2020c5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+}   
+
+table tbody tr{
+    cursor: pointer;
+    transition:all .25s ease-in-out;
+}
+
+table tbody tr:hover{
+    background-color: aquamarine;
+}
+
+.selection{
+    background-color: aquamarine;
+}
+
+.displayHiddent{
+    display:none !important;
+}
+
+.containerHead{    
+    min-height: 20%;
+    background-color: yellow;
+}
+
+.containerCenter{    
+    min-height: 60%;
+    display:flex;    
+    background-color: rosybrown;
+
+}
+
+.containerFoot{    
+    min-height: 20%;
+    background-color: aqua;
+}
+
+.columnIni, .columnEnd{
+    width: 20%;
+    background-color: gray;
+}
+
+.columnCenter{
+    width: 60%;
+    display:flex;
+    background-color: aliceblue;
+}
+
+.commonCalcVisor{
+    background-color: white;
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-end;    
+    padding-right: 10px ;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 15%;
+}
+
+.commonCalcVisor_visorAnt{
+    font-weight: bold;
+    height: 30%;
+}
+
+.commonCalcVisor_visor{
+    font-size: x-large;
+    font-weight: bold;    
+    display: flex;
+    align-items: center;
+    height: 70%;
+}
+
+
+.calculatorCointainer, .memoriCointainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    background-color: #202124;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+.memoriCointainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #3382a7;
+    overflow: auto;
+}
+
+.CommonCalcRow{
+    display: flex;    
+}
+
+.calcButtom{
+    width: 25%;
+    margin: 2px;  
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;    
+}
+
+.numberColor{
+    background-color: #424548;
+    color: white;
+}
+
+.operatColor{
+    background-color: #70757A;
+    color: white;
+}
+
+.equalColor{
+    background-color: #AECBFA;
+}
+
+.borderCalc{
+    border-radius:  10px ;   
+}

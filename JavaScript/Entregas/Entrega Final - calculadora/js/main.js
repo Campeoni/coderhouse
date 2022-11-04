@@ -59,6 +59,16 @@ const teclasValidas = [
 const apiCripto = "https://criptoya.com/api/dolar";
 const divDolar = document.getElementById("divDolar");
 
+//validadores 
+const validaInicio = ()=>{
+  let flag = false;
+
+  if (visor.innerText[0] === "0" && visor.innerText.length === 1){
+    flag = true;
+  }
+  return flag;
+}
+
 // Variables
 let numeroAOperar = "";
 let numeroAux = "";
@@ -79,7 +89,6 @@ setInterval(() => {
       cotizaciones.push({ indice: "oficial", valor: oficial });
 
       cotizaciones.push({ indice: "solidario", valor: solidario });
-      
     })
     .catch((error) => {
       console.log(error);
@@ -88,17 +97,14 @@ setInterval(() => {
 
 function buscaCotiza(indice) {
   const f = visor.innerText.length;
-  if (
-    (visor.innerText[0] === "0" && visor.innerText.length === 1) ||
-    operadores.includes(visor.innerText[f - 1])
-  ) {
+  if ((validaInicio()) || operadores.includes(visor.innerText[f - 1])  ) {
     cotizaciones.forEach((cotizacion) => {
       if (cotizacion.indice === indice) {
-        visor.innerText = visor.innerText + cotizacion.valor.toString();        
-      };
+        visor.innerText = visor.innerText + cotizacion.valor.toString();
+      }
     });
-  };
-};
+  }
+}
 
 document.addEventListener("keydown", (event) => {
   if (teclasValidas.includes(event.key)) {
@@ -123,10 +129,10 @@ document.addEventListener("keydown", (event) => {
         pointKey();
         break;
 
-      case "Enter": 
+      case "Enter":
         //se pone el foco en el enter y luego se pierde. Esto es porque sino queda el foco en algun boton y con el enter simulaba el click en el boton del foco
         btnIgual.focus();
-        btnIgual.blur();       
+        btnIgual.blur();
         equalKey();
         break;
 
@@ -144,7 +150,9 @@ document.addEventListener("keydown", (event) => {
 btnAyuda.addEventListener("click", () => {
   Swal.fire({
     title: "Ayuda",
-    text: "Solo se podra poner la cotizacion del dolar seleccionada si el visor esta en 0 ó es el comienzo de un nuevo operador",
+    html:
+    '<b>Memoria:</b> Cada vez que se hace una operación se guarda en memoría. Se puede borrar toda la memoria ó buscar seleccionar 1 para recuperarla.</br></br> ' +
+    '<b>Coizacion:</b> Solo se podrá poner la cotización del dolar seleccionada si el visor esta en 0 ó es el comienzo de un nuevo operador.</br> ',        
     confirmButtonText: "Aceptar",
     background: "#ADEAD9",
   });
@@ -191,7 +199,7 @@ btnCuatro.addEventListener("click", () => {
 });
 
 btnTres.addEventListener("click", () => {
-  concatena("3");  
+  concatena("3");
 });
 
 btnDos.addEventListener("click", () => {
@@ -319,7 +327,7 @@ function equalKey() {
 }
 
 function divisionKey() {
-  if (visor.innerText[0] === "0" && visor.innerText.length === 1) {
+  if (validaInicio()) {
     concatena("0/");
   } else {
     concatena("/");
@@ -327,7 +335,7 @@ function divisionKey() {
 }
 
 function multiplicationKey() {
-  if (visor.innerText[0] === "0" && visor.innerText.length === 1) {
+  if (validaInicio()) {
     concatena("0*");
   } else {
     concatena("*");
@@ -335,7 +343,7 @@ function multiplicationKey() {
 }
 
 function additionKey() {
-  if (visor.innerText[0] === "0" && visor.innerText.length === 1) {
+  if (validaInicio()) {
     concatena("0+");
   } else {
     concatena("+");
@@ -343,7 +351,7 @@ function additionKey() {
 }
 
 function subtractionKey() {
-  if (visor.innerText[0] === "0" && visor.innerText.length === 1) {
+  if (validaInicio()) {
     concatena("0-");
   } else {
     concatena("-");
@@ -361,7 +369,9 @@ function concatena(ingreso) {
       visor.innerText = visor.innerText + ingreso;
     }
   } else {
-    visor.innerText[0] === "0" ? (visor.innerText = ingreso) : (visor.innerText = visor.innerText + ingreso);
+    visor.innerText[0] === "0"
+      ? (visor.innerText = ingreso)
+      : (visor.innerText = visor.innerText + ingreso);
   }
 }
 
@@ -487,3 +497,4 @@ function permitePunto() {
   }
   return pointFlag;
 }
+

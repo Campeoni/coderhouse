@@ -497,4 +497,3 @@ function permitePunto() {
   }
   return pointFlag;
 }
-

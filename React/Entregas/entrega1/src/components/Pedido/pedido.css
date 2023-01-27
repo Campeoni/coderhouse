@@ -1,0 +1,31 @@
+.pedidoContainer .titulo{
+    font-weight: bolder;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+
+.pedidoContainer .itemsPedidoContainer, .pedidoContainer .itemsTituloContainer{
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.pedidoContainer .itemsTituloContainer .titulos {
+    font-weight: bolder;
+}
+
+.pedidoContainer .itemsTituloContainer .total {
+    font-weight: bolder;
+}
+
+.pedidoContainer .itemsPedidoContainer .pedidoTitulos{
+    font-weight: bolder;
+}
+
+.pedidoContainer .total{
+    padding-top: 10px;
+    font-weight: bolder;
+    font-size: large;
+}

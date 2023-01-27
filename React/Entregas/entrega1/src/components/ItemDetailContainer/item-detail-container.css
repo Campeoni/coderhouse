@@ -1,0 +1,33 @@
+.contenedorDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    margin-top: 3%;
+    gap: 2%;
+    min-height: 72vh;
+
+    
+}
+
+.contenedorDetail .detail{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contenedorDetail img {
+    width:  500px;
+    height: 500px;
+}
+
+.contenedorDetail .name{
+    font-size:50px ;
+}
+.contenedorDetail .price{
+    font-size: 30px ;
+}
+
+.contenedorDetail .tachado{
+    color: red;
+    text-decoration:line-through;
+}

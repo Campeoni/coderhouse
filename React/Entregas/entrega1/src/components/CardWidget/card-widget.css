@@ -1,0 +1,16 @@
+.card-widget{
+    margin-right: 10px;
+}
+
+.bag{    
+    height:40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.count{
+    transform: translate(13px,-20px);
+    margin-right: 13px;
+     
+}

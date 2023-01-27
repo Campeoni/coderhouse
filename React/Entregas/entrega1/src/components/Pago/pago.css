@@ -1,0 +1,47 @@
+.pagoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.pagoTitulo{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.pagoRealizarPedido {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.pagoRealizarPedido .volverEmpezar{
+    display: flex;
+    flex-direction: column;        
+    
+}
+.pagoRealizarPedido .volverEmpezar p{
+    font-size: xx-large;     
+    
+}
+
+.pagoRealizarPedido button{
+    width: 250px;    
+    height: 65px;    
+    font-size: x-large;
+    border-radius: 7px;
+    border-color: white;
+    border-width: 2px;
+    background-color: #3197d6;
+    color: white;
+}
+
+.noItemsPago{
+    display: flex;    
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+}

@@ -1,0 +1,23 @@
+.botonEliminar{
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: red;
+    color: white;
+}
+
+.centrado{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+.orderRow img{
+    height: 100px;
+    width:  100px;
+}
+
+.orderRow button{
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

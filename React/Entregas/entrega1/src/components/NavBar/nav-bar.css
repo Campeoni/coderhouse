@@ -1,0 +1,9 @@
+.navbar{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;    
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(223, 219, 219);
+    border-bottom-width: 3PX;
+}

@@ -1,0 +1,23 @@
+.footer{
+    background-color: rgba(128, 128, 128, 0.849);
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.column1{
+    display: flex;
+    flex-direction: column;    
+}
+
+.redesSocieles{
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-evenly;
+}
+
+.column2{
+    display: flex;
+    flex-direction: column;    
+}

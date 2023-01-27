@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Tienda Online "Lisboa"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto que simula las funcionalidades básicas de una tienda online.
+ 
+1. Disposición de artículos con diferentes filtros
+ 
+2. Manipular carrito: 
+>- Agregar Artículo
+>- Sacar Artículo
+>- Modificar cantidad de/los artículos
+ 
+3. CheckOut de la compra, donde la misma finaliza mostrando un código único de la orden de compra.  
+---
+# Levantar el proyecto de manera local
+Se asume que se tiene instalado node y npm de manera local.
 
-## Available Scripts
+## 1. Clonar el proyecto a nuestra maquina
+Desde una terminal nos posicionamos en la carpeta donde queremos clonar el proyecto y ejecutamos la siguientes lineas de comando:
 
-In the project directory, you can run:
+``` console
+git clone https://github.com/Campeoni/reactCoderhouse.git
+```
 
-### `npm start`
+![Clonar repositorio](public/img/ClonarRepo.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. Instalar dependencias del proyecto
+Nos posicionamos en la carpeta generada al agregar el proyecto y ejecutamos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+``` console
+npm install
+```
+![Instalar Dependencias](public/img/InstalarDependencias.png)
 
-### `npm test`
+## 3. Ejecutar el proyecto
+Desde una terminal posicionados en el proyecto y habiendo instalado las dependencias necesarias para el correcto funcionamiento del proyecto ejecutamos:
+``` console
+npm start
+```
+Esto completará el mismo y lo levantará localmente. Por defecto suele levantarlo en el puerto 3000 como se puede ver en la imagen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Ejecucion Proyecto](public/img/EjecucionProyecto.png)
 
-### `npm run build`
+---
+# Funcionalidades básicas
+La misma cuenta con las siguientes URL de navegación principal y sus respectivas funcionalidades. Se asume en los ejemplos que se está usando el socket "localhost:3000".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 1. Home
+Presionando el Logo principal (LISBOA) ó en la URL "http://localhost:3000/". Mostrará todos los artículos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 2. Ofertas
+Presionando en el link de "Ofertas" o en la URL "http://localhost:3000/Ofertas". Mostrará los artículos que están en oferta. 
+## 3. Categorías
+Presionando en los links de las diferentes categorías o en la URL "http://localhost:3000/Categorias/*nroCategoria*" (Ejemplo para remeras "http://localhost:3000/Categorias/1"). Muestra los artículos de la categoría a la cual corresponde.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4. Articulo
+Cuando seleccionamos un artículo nos muestra una imagen más detallada y algunas funcionalidades:
+### a. Seleccionar cantidad del articulo
+El mismo permite seleccionar como base 1 y no permite que sea menor a esa cantidad ni mayor a la cantidad disponible del mismo.
 
-### `npm run eject`
+### b. Agregar al carrito
+Con este botón podremos agregar al carrito este artículo con la cantidad seleccionada. Es importante saber que si el artículo ya está en el carrito al presionar el botón actualizaremos el artículo con la cantidad seleccionada.
+## 5. CardWidget 
+Presionando en el carrito. Nos mostrará un detalle del carrito. 
+- En caso de no tener ningún artículo, mostrará un mensaje informando que no existe ningún producto.
+- Si tiene artículos veremos cada uno separados en filas con las siguientes columnas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+|X|imagen|producto|precio|cantidad|sub Total|
+|-|------|--------|------|--------|---------|
+|boton para eliminar|imagen | nombre| precio individual| cantidad| precio total|
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Donde existen las siguientes funcionalidades:
 
-## Learn More
+![Funcionalidades Card widget](public/img/CardWidget.png)
+### a. Boton para elimiar el articulo
+Veremos un botón al principio de la fina en color rojo. Este permite sacar el artículo del carrito.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### b. Administrar la cantidad del articulo
+En caso que se quiere modificar la cantidad de dicho artículo se puede hacer en la fila de cantidad. Donde tendremos 1 botón para disminuir '-' y otro para sumar '+'. El mismo no permite que sea menor a 1 ni mayor a la cantidad disponible de dicho artículo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### c. Boton para finalizar compra
+Este botón sólo estará habilitado si existe algún artículo en el carrito. Nos llevará a la URL "http://localhost:3000/Checkout".
 
-### Code Splitting
+## 5. CheckOut
+En está pantalla esta dividida en 2 columnas y un botón para finalizar la compra. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Pantalla de PAgo](public/img/PantallaPago.png)
 
-### Analyzing the Bundle Size
+### a. Columna 1 
+En esta columna están los "Detalles de la facturación" que sirven para identificar los datos del comprador. La misma consta de 3 campos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Nombre 
+- Email
+- Mensaje
+### b. Columna 2 
+En esta columna está el detalle del pedido.
 
-### Making a Progressive Web App
+### c. Boton "Realizar el pedido"
+Este botón solamente estará activo si los 3 campos solicitados en el detalle de compra están completos. En caso contrario no se mostrará.
+ 
+Al presionar este botón daremos por finalizada la compra. Nos llevará a una pantalla donde indicará que el pedido ha finalizado con éxito y nos mostrará el ID de nuestra compra. También habrá un botón para volver a empezar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Compra Finalizada](public/img/FinalizarCompra.png)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+# Tener en cuenta 
+* En el menú principal hay links que son a modo de demostrativos y no tienen ningún contenido ni propósito funcional.
+   * Quienes somos
+   * FAQ
+   * Mi cuenta
+* Los botones de las redes sociales son solamente a modo ilustrativo para completar con info el footer. Los mismos no son funcionales.

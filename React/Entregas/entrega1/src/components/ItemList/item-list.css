@@ -1,0 +1,16 @@
+.container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    min-height: 79vh;
+
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;   
+    align-items: center; 
+}
+
